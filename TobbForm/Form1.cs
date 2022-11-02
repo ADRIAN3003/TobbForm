@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace TobbForm
 {
-    public partial class Form1 : Form
+    public partial class frmFo : Form
     {
-        public Form1()
+        string felhasznalo;
+        bool admin;
+        public frmFo(string felhasznalo, bool admin)
         {
             InitializeComponent();
+            this.felhasznalo = felhasznalo;
+            this.admin = admin;
+            this.Text += $" - {felhasznalo}";
+
+            if (admin)
+            {
+                this.BackColor = Color.Green;
+            } else
+            {
+                mAdatbekeres.Enabled = false;
+            }
+        }
+
+        private void mKilepes_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

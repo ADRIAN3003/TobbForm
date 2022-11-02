@@ -14,6 +14,9 @@ namespace TobbForm
     {
         string felhasznalo;
         bool admin;
+
+        public string Adat { get; set; }
+
         public frmFo(string felhasznalo, bool admin)
         {
             InitializeComponent();
@@ -33,6 +36,13 @@ namespace TobbForm
         private void mKilepes_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mAdatbekeres_Click(object sender, EventArgs e)
+        {
+            frmAdat frmAdat = new frmAdat(this);
+            frmAdat.ShowDialog();
+            lblSzoveg.Text = Adat;
         }
     }
 }

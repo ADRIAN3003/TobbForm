@@ -34,6 +34,7 @@ namespace TobbForm
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mAdatbekeres = new System.Windows.Forms.ToolStripMenuItem();
             this.mKilepes = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSzoveg = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@ namespace TobbForm
             this.mAdatbekeres.Name = "mAdatbekeres";
             this.mAdatbekeres.Size = new System.Drawing.Size(84, 20);
             this.mAdatbekeres.Text = "Adatbekérés";
+            this.mAdatbekeres.Click += new System.EventHandler(this.mAdatbekeres_Click);
             // 
             // mKilepes
             // 
@@ -66,11 +68,21 @@ namespace TobbForm
             this.mKilepes.Text = "Kilépés";
             this.mKilepes.Click += new System.EventHandler(this.mKilepes_Click);
             // 
+            // lblSzoveg
+            // 
+            this.lblSzoveg.AutoSize = true;
+            this.lblSzoveg.Location = new System.Drawing.Point(216, 216);
+            this.lblSzoveg.Name = "lblSzoveg";
+            this.lblSzoveg.Size = new System.Drawing.Size(51, 20);
+            this.lblSzoveg.TabIndex = 2;
+            this.lblSzoveg.Text = "label1";
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 472);
+            this.Controls.Add(this.lblSzoveg);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -92,6 +104,7 @@ namespace TobbForm
         private System.Windows.Forms.ToolStripMenuItem mAdatbekeres;
         private System.Windows.Forms.ToolStripMenuItem mKilepes;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label lblSzoveg;
     }
 }
 
